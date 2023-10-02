@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando 3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            text-indent: 50px;
+            font-family: 'Montserrat', sans-serif;
+            background-color: rgb(178, 245, 182);
+
+        }
+
+        .menu {
+            margin: 1vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+        }
+
+        .container {
+            background-color: white;
+            display: flex;
+            flex-flow: row nowrap;
+            width: 100vw;
+            height: 30vw;
+            border-bottom: 0.2vw solid rgb(14, 165, 25);
+            border-top: 0.2vw solid rgb(14, 165, 25);
+        }
+
+        .corpo {
+            width: 70vw;
+            height: 30vw;
+            margin: 1vw;
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .corpolateral {
+            width: 30vw;
+            height: 30vw;
+            border-left: 0.2vw solid rgb(14, 165, 25);
+        }
+
+        .corpolateral p {
+            margin: 1vw;
+            text-align: justify;
+            line-height: 2vw;
+
+        }
+
+        h3 {
+            margin: 1vw;
+            text-align: center;
+        }
+
+        .corpo div {
+
+            justify-content: space-evenly;
+            align-items: flex-start;
+            width: 8vw;
+            height: 5vw;
+            margin: 1vw;
+            border: 0.2vw solid black;
+        }
+
+        .quad {
+            display: flex;
+            flex-flow: column wrap;
+            text-align: center;
+            align-content: center;
+            flex-direction: column;
+        }
+        .legenda{
+            font-style: italic;
+        }
+
+
+        .footer {
+            display: flex;
+            background-color: rgb(178, 245, 182);
+            width: 100vw;
+            height: 5vw;
+            text-align: center;
+            justify-content: center;
+            font-size: 1.5vw;
+            flex-flow: column wrap;
+        }
+        .left{
+            display: flex;
+            flex-flow: column nowrap;
+        }
+        h2{
+            margin-top: 1vw;
+        }
+        .number{
+            font-weight: bold;
+            font-size: 2vw;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>..::Meu layout de site com Flexbox::..</h1>
+
+        <div class="menu">
+            <div><a href="">Inicio</a></div>
+            <div><a href="">Sobre</a></div>
+            <div><a href="">Produtos</a></div>
+            <div><a href="">Contatos</a></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="left">
+            <div>
+                <h2>Corpo do Site</h2>
+            </div>
+            <div class="corpo">
+
+                <div class="quad">
+                    <p class="number">1</p>
+                    <p class="legenda">One</p>
+                </div>
+                <div class="quad">
+                    <p class="number">2</p>
+                    <p class="legenda">Two</p>
+                </div>
+                <div class="quad">
+                    <p class="number">3</p>
+                    <p class="legenda">Three</p>
+                </div>
+                <div class="quad">
+                    <p class="number">4</p>
+                    <p class="legenda">Four</p>
+                </div>
+                <div class="quad">
+                    <p class="number">5</p>
+                    <p class="legenda">Five</p>
+                </div>
+                <div class="quad">
+                    <p class="number">6</p>
+                    <p class="legenda">Six</p>
+                </div>
+                <div class="quad">
+                    <p class="number">7</p>
+                    <d<p class="legenda">Seven</p>
+                </div>
+                <div class="quad">
+                    <p class="number">8</p>
+                    <d<p class="legenda">Eight</p>
+                </div>
+                <div class="quad">
+                    <p class="number">9</p>
+                    <p class="legenda">Nine</p>
+                </div>
+                <div class="quad">
+                    <p class="number">10</p>
+                    <p class="legenda">Ten</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="corpolateral">
+            <h3>Box Lateral</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam repudiandae, magni, similique quos quae
+                placeat odit reiciendis ducimus alias eos ad temporibus omnis? Doloribus, perspiciatis maiores?
+                Distinctio sit odio aliquam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum sed non
+                delectus magni natus ea. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea quasi dignissimos
+                hic quos ex beatae suscipit? Aliquam vitae suscipit, nisi hic et quaerat incidunt, minus possimus
+                laudantium non error ullam? </p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Criado por Gabriel Uyemura</p>
+        <p>teste@gmail.com</p>
+    </div>
+
+</body>
+
+</html>

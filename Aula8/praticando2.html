@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        form,
+        input,
+        button {
+            font-size: 1.5vw;
+        }
+
+        body {
+            background-size: 110vw 110vh;
+            background-repeat: no-repeat;
+            background-image: url(img/background.jpg);
+
+        }
+
+        .div {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <title>Praticando 1</title>
+</head>
+
+<body>
+    <h1>Praticando 1 - Formulários HTML</h1>
+    <p><a href="index.html">Voltar ao menu</a></p>
+
+    <div class="div1">
+
+
+        <form>
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" name="nome" value="Gabriel Hideki" /> <br>
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" /><br>
+
+            <label for="marca">Marca de motos que mais gosta:</label>
+            <select name="marca" id="marca">
+                <option value="Honda">Honda</option>
+                <option value="Yamaha">Yamaha</option>
+                <option value="Suzuki">Suzuki</option>
+            </select><br>
+
+            <label for="observ">Observações</label> <br>
+            <textarea name="observ" id="observ" cols="50" rows="5"></textarea> <br><br>
+
+            <label for="dif_web">Linguaguem WEB favorita: </label>
+            <input type="radio" id="html" name="favorite" value="HTML">
+            <label for="html"><img src="img/html.png" alt="html" width="7%"></label>
+            <input type="radio" id="css" name="favorite" value="CSS">
+            <label for="css"><img src="img/css.png" alt="css" width="4.5%"></label>
+            <input type="radio" id="js" name="favorite" value="JavaScript">
+            <label for="js"><img src="img/js.png" alt="javascript" width="11%"></label> <br><br>
+
+            <label for="favorite_food">Selecione uma(s) comida(s) favorita(s):</label> <br>
+            <input type="checkbox" id="Lasanha" name="favorite_food" value="Lasanha">
+            <label for="Lasanha"><a href="https://www.tudogostoso.com.br/receita/876-lasanha-de-carne-moida.html" target="_blank">Lasanha</a></label> <br>
+            <input type="checkbox" id="Pizza" name="favorite_food" value="Pizza">
+            <label for="Pizza"><a href="https://www.receiteria.com.br/receitas-de-pizza/" target="_blank">Pizza</a></label> <br>
+            <input type="checkbox" id="Hamburguer" name="favorite_food" value="Hamburguer">
+            <label for="Hamburguer"><a href="https://www.tudogostoso.com.br/receita/155011-hamburguer-caseiro.html" target="_blank">Hamburguer</a></label> <br>
+            <input type="checkbox" id="Churrasco" name="favorite_food" value="Churrasco">
+            <label for="Churrasco"><a href="https://charcutaria.org/carnes/10-dicas-para-um-bom-churrasco/" target="_blank">Churrasco</a></label>
+            <br><br>
+
+            <button type="submit" value="submit">Enviar</button>
+            <button type="reset" value="reset">Limpar</button>
+        </form>
+    </div>
+</body>
+
+</html>

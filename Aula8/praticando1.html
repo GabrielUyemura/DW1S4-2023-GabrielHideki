@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        form,input,button {
+            font-size: 1.5vw;
+        }
+    </style>
+    <title>Praticando 1</title>
+</head>
+
+<body>
+    <h1>Praticando 1 - Formulários HTML</h1>
+    <p><a href="index.html">Voltar ao menu</a></p>
+    
+    <form>
+        <label for="nome">Nome: </label>
+        <input type="text" id="nome" name="nome" value="Gabriel Hideki" /> <br>
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com" /><br>
+
+        <label for="marca">Marca de motos que mais gosta:</label>
+        <select name="marca" id="marca">
+            <option value="Honda">Honda</option>
+            <option value="Yamaha">Yamaha</option>
+            <option value="Suzuki">Suzuki</option>
+        </select><br>
+
+        <label for="observ">Observações</label> <br>
+        <textarea name="observ" id="observ" cols="50" rows="5"></textarea> <br><br>
+
+        <label for="dif_web">Linguaguem WEB favorita: </label>
+        <input type="radio" id="html" name="favorite" value="HTML">
+        <label for="html">HTML </label>
+        <input type="radio" id="css" name="favorite" value="CSS">
+        <label for="css">CSS </label>
+        <input type="radio" id="javascript" name="favorite" value="JavaScript">
+        <label for="js">JavaScript</label> <br><br>
+
+        <label for="favorite_food">Selecione uma(s) comida(s) favorita(s):</label> <br>
+        <input type="checkbox" id="Lasanha" name="favorite_food" value="Lasanha">
+        <label for="Lasanha">Lasanha</label> <br>
+        <input type="checkbox" id="Pizza" name="favorite_food" value="Pizza">
+        <label for="Pizza">Pizza</label> <br>
+        <input type="checkbox" id="Hamburguer" name="favorite_food" value="Hamburguer">
+        <label for="Hamburguer">Hamburguer</label> <br>
+        <input type="checkbox" id="Churrasco" name="favorite_food" value="Churrasco">
+        <label for="Churrasco">Churrasco</label> 
+        <br><br>
+
+        <button type="submit" value="submit">Enviar</button>
+        <button type="reset" value="reset">Limpar</button>
+    </form>
+</body>
+
+</html>

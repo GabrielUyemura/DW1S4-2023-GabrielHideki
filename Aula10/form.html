@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <title>Formulário - Chu Eventos</title>
+</head>
+
+<body>
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Formulário da Chu Eventos</h1>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="form.html">Formulário</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pricing.html">Tabela de Preços</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">Sobre</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container my-4">
+        <form>
+            <div class="row mb-3">
+                <div class="col-4">
+                    <label for="nome" class="form-label">*Nome:</label>
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome"
+                        required>
+                </div>
+                <div class="col-8">
+                    <label for="email" class="form-label">*E-mail:</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail"
+                        required>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-4">
+                    <label for="telefone" class="form-label">*Telefone:</label>
+                    <input type="tel" class="form-control" id="telefone" name="telefone" required>
+                </div>
+                <div class="col-8">
+                    <label for="url" class="form-label">LINK:</label>
+                    <input type="url" class="form-control" id="url" name="url"
+                        placeholder="Link de inspiração de como gostaria sua festa">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-9">
+                    <label for="text" class="form-label">Tema da festa</label>
+                    <input type="texto-tema" class="form-control" id="texto-tema" name="numero"
+                        placeholder="Digite um tema da festa">
+                </div>
+                <div class="col-3">
+                    <label for="data" class="form-label">Data da festa:</label>
+                    <input type="date" class="form-control" id="data" name="data">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-6">
+                    <label for="arquivo" class="form-label">Enviar Arquivo para inspiração da decoração:</label>
+                    <input type="file" class="form-control" id="arquivo" name="arquivo">
+                </div>
+                <div class="col-6">
+                    <label for="lista-suspensa" class="form-label">Nossos pacotes:</label>
+                    <select class="form-select" id="lista-suspensa" name="lista-suspensa">
+                        <option value="opcao1">Apenas decoração</option>
+                        <option value="opcao2">Apenas buffet</option>
+                        <option value="opcao3">Festa completa</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="texto-longo" class="form-label">Conte-nos:</label>
+                <textarea class="form-control" id="texto-longo" name="texto-longo"
+                    placeholder="Nos conte aqui sua história e o por que da festa, para entedermos e fazer o melhor possível"
+                    rows="4"></textarea>
+            </div>
+            <div class="form-check mt-4">
+                <input type="checkbox" class="form-check-input" id="checagem-unica" name="checagem-unica">
+                <label class="form-check-label" for="checagem-unica">Quero enviar minhas informações para um
+                    orçamento</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="reset" class="btn btn-secondary">Limpar</button>
+        </form>
+    </div>
+</body>
+
+</html>

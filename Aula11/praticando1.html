@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1{
+            text-align: center;
+            margin-top: 100px;
+        }
+        #container {
+            text-align: center;
+            margin-top: 100px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #output {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Praticando 1 - JavaScript</h1>
+    <div id="container">
+        
+        <script>
+            const nome = prompt("Qual é o seu nome?");
+            if (nome) {
+                document.getElementById("container").innerHTML = `
+                    <p><a href="index.html">Voltar ao menu</a></p>
+                    <h2>Seja bem-vindo, ${nome}!</h2>
+                    <button id="addParagrafo">Adicionar Parágrafo</button>
+                    <button id="limparParagrafos">Limpar Parágrafos</button>
+                    <div id="output"></div>
+                `;
+                
+                const addParagrafoButton = document.getElementById("addParagrafo");
+                const limparParagrafosButton = document.getElementById("limparParagrafos");
+                const outputDiv = document.getElementById("output");
+                const loremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+
+                addParagrafoButton.addEventListener("click", () => {
+                    const paragrafo = document.createElement("p");
+                    paragrafo.textContent = loremIpsum;
+                    outputDiv.appendChild(paragrafo);
+                });
+
+                limparParagrafosButton.addEventListener("click", () => {
+                    outputDiv.innerHTML = "";
+                });
+            }
+        </script>
+    </div>
+</body>
+</html>
+
+
+
+
+

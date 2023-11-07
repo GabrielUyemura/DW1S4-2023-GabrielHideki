@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando 2</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-4">Praticando 2 - JavaScript - Mini Calculadora</h1>
+        <p class="text-center mt-4"><a href="index.html">Voltar ao menu</a></p>
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-4">
+                <div class="form-row mb-2">
+                    <div class="col">
+                        <input type="text" class="form-control text-center" id="num1" placeholder="Número 1">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control text-center" id="num2" placeholder="Número 2">
+                    </div>
+                </div>
+                <input type="text" class="form-control mb-2 text-center" id="resultado" placeholder="Resultado" readonly>
+                <div class="text-center">
+                    <button class="btn btn-primary mr-2" onclick="calcular('+')">Soma</button>
+                    <button class="btn btn-primary mr-2" onclick="calcular('-')">Subtração</button>
+                </div>
+                <div class="text-center mt-2">
+                    <button class="btn btn-primary mr-2" onclick="calcular('*')">Multiplicação</button>
+                    <button class="btn btn-primary" onclick="calcular('/')">Divisão</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calcular(operador) {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const resultadoElement = document.getElementById('resultado');
+            
+            if (isNaN(num1) || isNaN(num2)) {
+                resultadoElement.value = 'Preencha ambos os campos';
+                return;
+            }
+            
+            switch (operador) {
+                case '+':
+                    resultadoElement.value = num1 + num2;
+                    break;
+                case '-':
+                    resultadoElement.value = num1 - num2;
+                    break;
+                case '*':
+                    resultadoElement.value = num1 * num2;
+                    break;
+                case '/':
+                    if (num2 === 0) {
+                        resultadoElement.value = 'Divisão por zero';
+                    } else {
+                        resultadoElement.value = num1 / num2;
+                    }
+                    break;
+            }
+        }
+    </script>
+
+    <!-- Adicione o link para o Bootstrap JS e o jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

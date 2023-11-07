@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando 3</title>
+
+    <style>
+        body {
+            margin-top: 2%;
+        }
+
+        h1 {
+            margin-left: 3%;
+        }
+
+        .container {
+            display: flex;
+            margin-left: 4%;
+        }
+
+        .caixas {
+            margin-right: 10px;
+            width: 100px;
+            height: 100px;
+            border: 4px black solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        #c1 {
+            background-color: red;
+        }
+
+        #c2 {
+            background-color: green;
+        }
+
+        #c3 {
+            background-color: blue;
+        }
+
+        #c4 {
+            background-color: yellow;
+        }
+
+        #c5 {
+            background-color: violet;
+        }
+
+        button {
+            margin-top: 2%;
+            font-size: x-large;
+            margin-left: 4%;
+            width: 5vw;
+            height: 5vh;
+        }
+
+        #preview {
+            position: absolute;
+            font-size: 24px;
+            display: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <h1>Praticando 3 - JavaScript - Cores (click e mouse)</h1>
+    <p><a href="index.html">Voltar ao menu</a></p>
+
+    <div class="container">
+        <div class="caixas" id="c1" onmouseover="previewColor('red')" onmouseout="hidePreview()" onclick="setBackgroundColor('red')">Red</div>
+        <div class="caixas" id="c2" onmouseover="previewColor('green')" onmouseout="hidePreview()" onclick="setBackgroundColor('green')">Green</div>
+        <div class="caixas" id="c3" onmouseover="previewColor('blue')" onmouseout="hidePreview()" onclick="setBackgroundColor('blue')">Blue</div>
+        <div class="caixas" id="c4" onmouseover="previewColor('yellow')" onmouseout="hidePreview()" onclick="setBackgroundColor('yellow')">Yellow</div>
+        <div class="caixas" id="c5" onmouseover="previewColor('violet')" onmouseout="hidePreview()" onclick="setBackgroundColor('violet')">Violet</div>
+    </div>
+    <div>
+        <button type="reset" id="reset">Reset</button>
+    </div>
+    <div id="preview">PREVIEW</div>
+
+    <script>
+        let originalColor = 'white';
+
+        function previewColor(color) {
+            const preview = document.getElementById('preview');
+            document.body.style.backgroundColor = color;
+            preview.style.display = 'block';
+        }
+
+        function setBackgroundColor(color) {
+            originalColor = color;
+            document.body.style.backgroundColor = color;
+            const preview = document.getElementById('preview');
+            preview.style.display = 'none';
+        }
+
+        function hidePreview() {
+            const preview = document.getElementById('preview');
+            document.body.style.backgroundColor = originalColor;
+            preview.style.display = 'none';
+        }
+
+        document.getElementById('reset').addEventListener('click', function() {
+            resetBackgroundColor();
+        });
+
+        function resetBackgroundColor() {
+            originalColor = 'white';
+            document.body.style.backgroundColor = originalColor;
+        }
+    </script>
+</body>
+</html>

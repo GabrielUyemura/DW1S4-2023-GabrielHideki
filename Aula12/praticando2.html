@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <title>Praticando 2</title>
+  <style>
+    .is-invalid {
+      border: 1px solid #dc3545 !important;
+    }
+
+    .is-valid {
+      border: 1px solid #28a745 !important;
+    }
+  </style>
+</head>
+<body>
+
+ 
+  <div class="container mt-5">
+    <h1>Praticando 2 – Formulário com validações</h1>
+    <p><a href="index.html">Voltar ao menu</a></p>
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="nome">Nome</label>
+          <input type="text" class="form-control is-invalid" id="nome" placeholder="Digite seu nome" oninput="validarCampo(this)">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="email">Email</label>
+          <input type="email" class="form-control is-invalid" id="email" placeholder="Digite seu email" oninput="validarCampo(this)">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="telefone">Telefone</label>
+          <input type="tel" class="form-control is-invalid" id="telefone" placeholder="Digite seu telefone" oninput="validarCampo(this)">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="idade">Idade</label>
+          <select class="form-control is-invalid" id="idade" oninput="validarCampo(this)">
+            <option value="" selected>Selecione a idade</option>
+            <option value="menos18">Menos de 18 anos</option>
+            <option value="18-30">18-30 anos</option>
+            <option value="31-50">31-50 anos</option>
+            <option value="mais50">Mais de 50 anos</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="observacoes">Observações</label>
+        <textarea class="form-control is-invalid" id="observacoes" rows="3" placeholder="Digite suas observações" oninput="validarCampo(this)"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script src="script_prat2.js"></script>
+</body>
+</html>
